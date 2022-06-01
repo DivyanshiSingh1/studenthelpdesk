@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>RGIPT Student Portal</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='1.css')}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  
+</head>
+<body>
+	<div class="intro">
+		<canvas id="spiders" class="hidden-xs"></canvas>
+		<article class="custom-post">
+		  <div style="float:left;position:relative;left:100px;top:2px;width:35%"><img src="{{url_for('static',filename='logo.png')}}" height="100px" width="100px"></div>
+	<h1 class="glow" style="color:#eeeeee;float:left;position:relative;width:50%;top:20px;">RGIPT Admin Portal</h1>
+	<div class="clear"></div>
+	
+	<br><br>
+	<hr color="#caae57" style="opacity:0.8">
+<p> {{error}} </p>
+
+
+	
+	
+
+
+
+	<div class="left"><img id="yourImgId" src="{{url_for('static',filename='quote.jpg')}}" height="360" width="105%" style="opacity:0.9"></div>
+
+	<div class="right">
+	
+		<form id="msform" action="/adminlogin" method="POST">
+	
+	<fieldset>
+	<h2 class="fs-title">Admin Login</h2>
+	<h3 class="fs-title">	<a href="/adminregisterationForm">New User?</a>
+	</h3>
+	
+	<br>
+	<br>
+<input type="text" name="email" placeholder="Email" />
+<input type="password" name="password" placeholder="Password" />
+	<input type="submit">
+	
+	
+	</fieldset>
+	
+	
+	</form>
+	
+	
+		
+	<br><br><br>
+	
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script><script  src="./script.js"></script>
+	
+		</div>
+		 
+	</article>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+	<!-- partial -->
+	  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'>
+	
+	  </script>
+	<script 
+	type="text/javascript"
+	src="{{url_for('static',filename='1.js')}}"
+	></script>
+	
+	</body>
+	</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>Sign-Up</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+<link rel="stylesheet" href="{{url_for('static',filename='5.css')}}">
+
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+                <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                    <h2 id="heading">Sign Up Your User Account</h2>
+                    <p>Fill all form field to go to next step</p>
+                    <form id="msform" action="/serviceregister" method="POST" enctype="multipart/form-data" onsubmit="return validate()">
+                        
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Account Information:</h2>
+                                    </div>
+                                </div> 
+
+
+                                <label for="email" class="fieldlabels">Email: *</label> <input type="email" name="email" placeholder="Email Id" id="email"/> <label for="password" class="fieldlabels">Password: *</label> <input type="password" name="password" placeholder="Password" id="password"/> <label for="cpassword" class="fieldlabels">Confirm Password: *</label> <input type="password" name="cpassword" placeholder="Confirm Password" />
+                                <label for="name" class="fieldlabels">Name: *</label> <input type="text" name="name" placeholder="Name" id="name" /> 
+                                    
+         
+        
+                                    
+                                     
+                                
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                              
+                                    
+            
+            
+            
+            
+            
+                        
+                                </div> 
+                            
+                            
+                            
+                            
+                            
+                            
+                                <button type="submit" class="next action-button">Submit</button>
+                            
+                            
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- partial -->
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+          <script 
+          type="text/javascript"
+          src="{{url_for('static',filename='5.js')}}"
+        ></script>
+        
+        </body>
+        </html>

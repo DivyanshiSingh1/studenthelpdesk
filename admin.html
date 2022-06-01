@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/> 
+  <title>RGIPT Student Portal</title>
+
+  <link rel="stylesheet" href="{{url_for('static',filename='1i.css')}}">
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'>
+<link rel="stylesheet" href="{{url_for('static',filename='4.css')}}">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" rel="stylesheet">  
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+<link rel="stylesheet" href="{{url_for('static',filename='4.css')}}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/paper/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link href="{{url_for('static',filename='Filter.css')}}" rel="stylesheet">
+<script src="{{url_for('static',filename='Filter.js')}}"></script>
+
+
+</head>
+
+
+<body>
+
+
+<div class="intro">
+    <canvas id="spiders" class="hidden-xs"></canvas>
+    <article class="custom-post">
+<div id="rcorners3" style="background-color: rgba(0,0,0,0.5);height:100%;">
+<div style="float:left;position:relative;left:100px;top:2px;width:35%"><img src="{{url_for('static',filename='logo.png')}}" height="100px" width="100px"></div>
+<h1 class="glow" style="color:#eeeeee;float:left;position:relative;width:50%;top:20px;">RGIPT Admin Portal</h1>
+<div class="clear"></div>
+
+<div class="container1 deepOrange pullRightLeft">
+
+	{% if not loggedIn %}
+	<div id="signInButton">
+		<h4 style="color:whitesmoke">Student?</h4>&nbsp &nbsp
+		<a class="link" href="/loginForm">Sign In</a>
+&nbsp &nbsp
+		<a class="link" href="/registerationForm">Sign Up</a><br><br><hr><hr>
+
+		<h4 style="color:whitesmoke">Admin?</h4>&nbsp &nbsp
+		<a class="link" href="/adminloginForm">Sign In</a>
+&nbsp &nbsp
+		<a class="link" href="/adminregisterationForm">Sign Up</a><br><br><hr><hr>
+        
+		<h4 style="color:whitesmoke">Service Provider?</h4>&nbsp &nbsp
+		<a class="link" href="/serviceloginForm">Sign In</a>
+&nbsp &nbsp
+		<a class="link" href="/serviceregisterationForm">Sign Up</a>
+	</div>
+	{% else %} 
+			<a href="/logout">Sign Out</a>
+	
+</div>
+
+
+<div class="student-profile py-4">
+	<div class="container">
+	  <div class="row">
+		
+  
+		<div class="col-lg-9">
+		  <div class="card shadow-sm">
+			<div class="card-header bg-transparent border-0">
+			  <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Admin Access</h3>
+			</div>
+			<div class="card-body pt-0">
+				<div class="row">
+					<div class="panel panel-primary filterable" style="margin-left:0px;">
+						<div class="panel-heading" style="background-color: rgb(180,115,100);">
+							<h3 class="panel-title">
+						<button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span>Find your Query?</button>
+					</h3>
+			
+						</div>
+						<p>{{msg}}</p>
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr class="filters">
+							<th><input type="text" class="form-control" placeholder="Query" disabled></th>
+							<th><input type="date" class="form-control" placeholder="Date" disabled></th>
+							<th><input type="text" class="form-control" placeholder="Status" disabled></th>
+							<th><input type="text" class="form-control" placeholder="Email" disabled></th>
+							<th><input type="text" class="form-control" placeholder="Verify" disabled></th>
+							
+						</tr>
+					</thead>
+					<tbody>{% for row in data %}
+						<tr>
+							<td>{{row[0]}}</td>
+							<td>{{row[1]}}</td>
+							<td>{{row[2]}}</td>
+							<td>{{row[3]}}</td>
+							<td>{{row[4]}}</td>
+							
+						</tr>
+					
+						{% endfor %}
+					</tbody>
+				</table><br><br><br>
+			  
+				<form action="/adminUpdateQuery" method="POST">
+					<label for="query" class="fieldlabels"> query: </label> <input name="query" type="text">&nbsp&nbsp
+					<label for="date" class="fieldlabels"> date: </label> <input type="text" name="date">&nbsp&nbsp
+					<label for="email" class="fieldlabels"> email: </label> <input type="text" name="email"><br>
+					<label for="verify" class="fieldlabels"> verify (yes/no): </label> <input type="text" name="verify">&nbsp&nbsp&nbsp&nbsp
+				  
+				 
+				  <span class="panel-title">
+					<input class="btn btn-default btn-xs btn-filter" type="submit">
+				  </span>
+				</form>
+				<br>
+				<p style="padding:5px;">No.of Queries : <span id="rowcount"></span></p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  
+  
+  
+  
+  
+  
+  </div>
+  </article>
+  </div>
+  
+  {% endif %}
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./1.js"></script>
+  <script 
+	type="text/javascript"
+	src="{{url_for('static',filename='7.js')}}"
+  ></script>
+  
+  </body>
+  </html>
+

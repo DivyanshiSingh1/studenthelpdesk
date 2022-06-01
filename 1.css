@@ -1,0 +1,237 @@
+@media (min-width: 768px){
+.intro {
+    height: 100%;
+    padding: 0;
+  }
+}
+ul{
+	text-align:center;
+}
+.clear{
+clear: both;
+}
+html{
+	background: url(rgipt.jpg) no-repeat top center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.intro {
+top:0px;
+left:0px;
+  display: table;
+    width: 100%;
+    height: 100%;
+    padding: 300px 0;
+    text-align: center;
+    color: #fff;
+  position:relative;
+ 
+}
+.glow {
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #eeeeee, 0 0 30px rgb(216,156,133),
+                 0 0 50px rgb(180,115,100), 0 0 60px rgb(180,115,100), 0 0 70px rgb(180,115,100);
+  }
+  to {
+    text-shadow: 0 0 20px #eeeeee, 0 0 30px rgb(229,179,164), 0 0 40px rgb(229,179,164), 0 0 50px rgb(229,179,164), 
+                 0 0 60px rgb(180,115,100), 0 0 70px rgb(180,115,100), 0 0 80px rgb(180,115,100);
+  }
+}
+
+#spiders {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+}
+#spiders {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+}
+div.left{
+	float: left;
+	margin:0px;
+	width:40%;
+	position: absolute;
+}
+div.right{
+	float: left;
+	width:58%;
+	height:100%;
+	left:42%;
+	background-color: rgba(0,0,0,0.5);
+	position:relative;
+}
+
+article.custom-post {position: absolute;top: 25px;left: 20%; width:60%;}
+article h1 {font-size: 2em;font-family: Sans-serif;
+}
+#msform {
+top: 15px;
+	width: 70%;
+	left:2%;
+	text-align: center;
+	position: relative;
+	padding-top: 20px;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px #caae57;
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 120%;
+	margin: 0 10%;
+	
+	
+	position: relative;
+}
+
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+
+#msform input, #msform textarea {
+	padding: 15px;
+	border: 2px solid rgb(180,115,100);
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	font-weight: bold;
+	color: #caae57;
+	font-size: 15px;
+}
+
+input:focus{
+	border: 0 none;
+}
+
+#msform .action-button {
+	width: 100px;
+	background: rgb(180,115,100);
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #caae57;
+}
+
+
+.student-profile .card {
+  border-radius: 10px;
+}
+
+.student-profile .card .card-header .profile_img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 10px auto;
+  border: 10px solid #ccc;
+  border-radius: 50%;
+}
+
+.student-profile .card h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.student-profile .card p {
+  font-size: 16px;
+  color: #000;
+}
+
+.student-profile .table th,
+.student-profile .table td {
+  font-size: 14px;
+  padding: 5px 10px;
+  color: #000;
+}
+
+#rcorners3 {
+  border-radius: 15px 50px;
+  padding: 20px;
+}
+
+
+div.container1
+{
+    font-family: Raleway;
+    margin-top:5px;
+	padding-top:10px;
+	background-color:rgb(180,115,100);
+	padding-bottom:10px;
+	text-align: center;
+}
+
+div.container1 a
+{
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 0px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.deepOrange
+{
+    background: rgb(180,115,100);
+}
+
+div.pullRightLeft a:before, div.pullRightLeft a:after
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: black;
+    opacity: 0.3;
+	z-index:-1;
+    transition: all 0.3s;
+}
+
+div.pullRightLeft a:before
+{
+    left: 0px;
+} 
+
+div.pullRightLeft a:after
+{
+    right: 0px;
+}
+
+div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
+{
+    width: 100%;
+}
+.fs-title {
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #caae57;
+	font-weight: bold;
+	margin-bottom: 10px;
+}

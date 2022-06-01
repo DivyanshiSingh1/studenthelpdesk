@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>Sign-Up</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+<link rel="stylesheet" href="{{url_for('static',filename='5.css')}}">
+
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+                <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                    <h2 id="heading">Sign Up Your User Account</h2>
+                    <p>Fill all form field to go to next step</p>
+                    <form id="msform" action="/register" method="POST" enctype="multipart/form-data" onsubmit="return validate()">
+                        
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Account Information:</h2>
+                                    </div>
+                                </div> 
+
+
+                                <label for="email" class="fieldlabels">Email: *</label> <input type="email" name="email" placeholder="Email Id" id="email"/> <label for="password" class="fieldlabels">Password: *</label> <input type="password" name="password" placeholder="Password" id="password"/> <label for="cpassword" class="fieldlabels">Confirm Password: *</label> <input type="password" name="cpassword" placeholder="Confirm Password" />
+                                <br>
+                                <div class="form-card">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Personal Information:</h2>
+                                        </div>
+                                    </div> <label for="name" class="fieldlabels">Name: *</label> <input type="text" name="name" placeholder="Name" id="name" /> <label for="roll" class="fieldlabels">Roll Number: *</label> <input type="text" name="roll" id="roll" placeholder="Roll Number" />
+                                    
+                                    <label for="program" class="fieldlabels">Program: *</label> <input type="text" name="program" placeholder="Program" id="program"/>
+                                    
+        <label for="branch" class="fieldlabels">Branch: *</label> <input type="text" name="branch" id="branch" placeholder="Branch" />
+        <label for="batch" class="fieldlabels">Batch: *</label> <input type="text" name="batch" id="batch" placeholder="Batch" />
+        <label for="dob" class="fieldlabels">Date Of Birth: *</label> <input type="text" name="dob" id="dob" placeholder="Date Of Birth" />
+        <label for="presentaddress"class="fieldlabels">Present Address: *</label> <input type="text" name="presentaddress" id="presentaddress" placeholder="Present Address" />
+        <label for="permanentaddress" class="fieldlabels">Permanent Address: *</label> <input type="text" name="permanentaddress" id="permanentaddress" placeholder="Permanent Address" />
+        <label for="mobile" class="fieldlabels">Mobile Number: *</label> <input type="text" name="mobile" id="mobile" placeholder="Mobile Number" />
+        <label for="parentmobile" class="fieldlabels">Parent's Mobile Number: *</label> <input type="text" name="parentmobile" id="parentmobile" placeholder="Parent's Mobile Number:" />
+        <label for="bloodgroup" class="fieldlabels">Blood Group: *</label> <input type="text" name="bloodgroup" id="bloodgroup" placeholder="Blood Group:" />
+        <label for="allergic" class="fieldlabels">Allergic: *</label> <input type="text" name="allergic" id="allergic" placeholder="Allergic:" />
+        
+        
+        
+        
+                                    
+                                     
+                                <br>
+                                <div class="form-card">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Image Upload:</h2>
+                                        </div>
+                                    </div> <label for="photo" class="fieldlabels">Upload Your Photo:</label> <input type="file" name="photo" id="photo" accept="image/*"> <label for="sign" class="fieldlabels">Upload Signature Photo:</label> <input type="file" name="sign" id="sign" accept="image/*">
+                                <br>
+                                <div class="form-card">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Academic Information:</h2>
+                                        </div>
+                                    </div> 
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+        <label for="cgpa" class="fieldlabels">CGPA: *</label> <input type="text" name="cgpa" id="cgpa" placeholder="CGPA" />	
+        <label for="skills" class="fieldlabels">Skills: *</label> <input type="text" name="skills" id="skills" placeholder="Skills" />	
+        <label for="linkedin" class="fieldlabels">LinkedIn: *</label> <input type="text" name="linkedin" id="linkedin" placeholder="LinkedIn" />	
+        
+                                
+                                    
+            
+            
+            
+            
+            
+                        
+                                </div> 
+                            
+                            
+                            
+                            
+                            
+                            
+                                <button type="submit" class="next action-button">Submit</button>
+                            
+                            
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- partial -->
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+          <script 
+          type="text/javascript"
+          src="{{url_for('static',filename='5.js')}}"
+        ></script>
+        
+        </body>
+        </html>
+
+
+
+
+
